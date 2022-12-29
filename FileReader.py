@@ -7,7 +7,10 @@ class FileReader:
         super().__init__()
 
     def readFile(self, filePath):
-        return open(filePath, 'r').readlines()
+        return open(filePath).read()
+
+    def readFileLines(self, filePath):
+        return open(filePath).readlines()
 
     def removeComments(self, lines):
         filterdLines = list()
@@ -22,8 +25,6 @@ class FileReader:
 
 
 if __name__ == "__main__" :
+    print(sys.argv)
     fileReader = FileReader()
-    lines = fileReader.readFile( "../test/file_to_filter.txt")
-    print (*lines)
-    print("")
-    print (*fileReader.removeComments(lines))
+    print( fileReader.readFile( sys.argv[1]) )
