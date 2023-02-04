@@ -1,6 +1,17 @@
 import os
 import sys
 import subprocess
+from dataclasses import dataclass, field
+
+
+@dataclass
+class FileInfo:
+    name: str = ""
+    size: int = 0
+    lastModifies: str = ""
+    created: str = ""
+    md5: str = ""
+
 
 class SystemUtility:
     def __init__(self) -> None:
@@ -13,6 +24,14 @@ class SystemUtility:
         result = [item for item in result if item]
         return result
 
+
+    def getFileInfo(self, path):
+        fileInfo = FileInfo()
+        fileInfo.name = path
+        fileInfo.size = os.path.getsize(path)
+        fileInfo.lastModifies = os.path.getmtime(path)
+        fileInfo.created = os.path.getctime(path)
+        return fileInfo
 
 if __name__ == "__main__" :
     sysUtil = SystemUtility()
