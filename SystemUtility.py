@@ -32,6 +32,9 @@ class SystemUtility:
         fileInfo.lastModifies = os.path.getmtime(path)
         fileInfo.created = os.path.getctime(path)
         return fileInfo
+    
+    def deleteFiles(self, path):
+        os.remove(path)
 
 if __name__ == "__main__" :
     sysUtil = SystemUtility()
