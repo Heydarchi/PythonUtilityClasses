@@ -7,11 +7,11 @@ class FileEnumeration:
         self.sysUtil = SystemUtility()
         self.listContexts = list()
         self.listTeFiles = list()
-        self.enumeratePolicyFiles(self.path)
+        self.enumerate_policy_files(self.path)
 
-    def enumeratePolicyFiles(self, path):
-        self.listContexts = self.sysUtil.getListOfFiles("./test", "*_contexts")
-        self.listTeFiles = self.sysUtil.getListOfFiles("./test", "*.te")
+    def enumerate_policy_files(self, path):
+        self.listContexts = self.sysUtil.get_list_of_files("./test", "*_contexts")
+        self.listTeFiles = self.sysUtil.get_list_of_files("./test", "*.te")
 
 
 if __name__ == "__main__":

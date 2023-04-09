@@ -8,15 +8,15 @@ class FileReader:
         super().__init__()
 
     @staticmethod
-    def readFile(filePath):
+    def read_file(filePath):
         return open(filePath).read()
 
     @staticmethod
-    def readFileLines(filePath):
+    def read_file_lines(filePath):
         return open(filePath).readlines()
 
     @staticmethod
-    def removeComments(lines):
+    def remove_comments(lines):
         filtered_lines = list()
         for line in lines:
             if '#' in line:
@@ -31,4 +31,4 @@ class FileReader:
 if __name__ == "__main__":
     print(sys.argv)
     fileReader = FileReader()
-    print(fileReader.readFile(sys.argv[1]))
+    print(fileReader.read_file(sys.argv[1]))

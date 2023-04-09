@@ -18,7 +18,7 @@ class SystemUtility:
         super().__init__()
 
     @staticmethod
-    def getListOfFiles(path, pattern):
+    def get_list_of_files(path, pattern):
         result = subprocess.Popen(
             ['find', path, '-name', pattern], stdout=subprocess.PIPE).communicate()[0]
         result = str(result, encoding='utf-8').split('\n')
@@ -26,7 +26,7 @@ class SystemUtility:
         return result
 
     @staticmethod
-    def getFileInfo(path):
+    def get_file_info(path):
         file_info = FileInfo()
         file_info.name = path
         file_info.size = os.path.getsize(path)
@@ -35,11 +35,11 @@ class SystemUtility:
         return file_info
 
     @staticmethod
-    def deleteFiles(path):
+    def delete_files(path):
         os.remove(path)
 
 
 if __name__ == "__main__":
     sysUtil = SystemUtility()
-    print(sysUtil.getListOfFiles("./test", "*_contexts"))
-    print(sysUtil.getListOfFiles("./test", "*.te"))
+    print(sysUtil.get_list_of_files("./test", "*_contexts"))
+    print(sysUtil.get_list_of_files("./test", "*.te"))
