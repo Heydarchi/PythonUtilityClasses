@@ -4,20 +4,20 @@ from SystemUtility import *
 class FileEnumeration:
     def __init__(self, path) -> None:
         self.path = path
-        self.listContexts = []
-        self.listTeFiles = []
+        self.list_contexts = []
+        self.list_te_files = []
         self.enumerate_policy_files(self.path)
 
     def enumerate_policy_files(self, path):
-        self.listContexts = SystemUtility.get_list_of_files("./test",
+        self.list_contexts = SystemUtility.get_list_of_files("./test",
                                                             "*_contexts")
-        self.listTeFiles = SystemUtility.get_list_of_files("./test",
+        self.list_te_files = SystemUtility.get_list_of_files("./test",
                                                            "*.te")
 
 
 if __name__ == "__main__":
-    flEnum = FileEnumeration('.')
+    fl_enum = FileEnumeration('.')
     print('-- List of *_contexts files:')
-    print(flEnum.listContexts)
+    print(fl_enum.list_contexts)
     print('-- List of *.te files:')
-    print(flEnum.listTeFiles)
+    print(fl_enum.list_te_files)

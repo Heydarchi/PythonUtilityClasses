@@ -6,12 +6,12 @@ class FileReader:
         super().__init__()
 
     @staticmethod
-    def read_file(filePath):
-        return open(filePath).read()
+    def read_file(file_path):
+        return open(file_path).read()
 
     @staticmethod
-    def read_file_lines(filePath):
-        return open(filePath).readlines()
+    def read_file_lines(file_path):
+        return open(file_path).readlines()
 
     @staticmethod
     def remove_comments(lines):

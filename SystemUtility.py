@@ -7,7 +7,7 @@ from dataclasses import dataclass
 class FileInfo:
     name: str = ""
     size: int = 0
-    lastModifies: str = ""
+    last_modifies: str = ""
     created: str = ""
     md5: str = ""
 
@@ -30,7 +30,7 @@ class SystemUtility:
         file_info = FileInfo()
         file_info.name = path
         file_info.size = os.path.getsize(path)
-        file_info.lastModifies = os.path.getmtime(path)
+        file_info.last_modifies = os.path.getmtime(path)
         file_info.created = os.path.getctime(path)
         return file_info
 

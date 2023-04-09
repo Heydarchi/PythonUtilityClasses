@@ -6,16 +6,16 @@ class FileWriter:
         super().__init__()
 
     @staticmethod
-    def write_file(filePath, content):
-        return open(filePath, "w+").write(content)
+    def write_file(file_path, content):
+        return open(file_path, "w+").write(content)
 
     @staticmethod
-    def write_file_append(filePath, content):
-        return open(filePath, "a+").write(content)
+    def write_file_append(file_path, content):
+        return open(file_path, "a+").write(content)
 
     @staticmethod
-    def write_list_to_file(filePath, list_of_str):
-        return open(filePath, "w+").write("\n".join(list_of_str))
+    def write_list_to_file(file_path, list_of_str):
+        return open(file_path, "w+").write("\n".join(list_of_str))
 
 
 if __name__ == "__main__":
