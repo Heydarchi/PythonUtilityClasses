@@ -19,9 +19,9 @@ class SystemUtility:
     @staticmethod
     def get_list_of_files(path, pattern):
         result = subprocess.Popen(
-            ['find', path, '-name', pattern],
-            stdout=subprocess.PIPE).communicate()[0]
-        result = str(result, encoding='utf-8').split('\n')
+            ["find", path, "-name", pattern], stdout=subprocess.PIPE
+        ).communicate()[0]
+        result = str(result, encoding="utf-8").split("\n")
         result = [item for item in result if item]
         return result
 

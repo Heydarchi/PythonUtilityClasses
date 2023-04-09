@@ -17,8 +17,8 @@ class FileReader:
     def remove_comments(lines):
         filtered_lines = []
         for line in lines:
-            if '#' in line:
-                _str = line[0: line.index('#')].strip()
+            if "#" in line:
+                _str = line[0 : line.index("#")].strip()
                 if len(_str):
                     filtered_lines.append(_str + "\n")
             else:

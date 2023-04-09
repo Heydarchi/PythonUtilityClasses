@@ -9,15 +9,13 @@ class FileEnumeration:
         self.enumerate_policy_files(self.path)
 
     def enumerate_policy_files(self, path):
-        self.list_contexts = SystemUtility.get_list_of_files("./test",
-                                                            "*_contexts")
-        self.list_te_files = SystemUtility.get_list_of_files("./test",
-                                                           "*.te")
+        self.list_contexts = SystemUtility.get_list_of_files("./test", "*_contexts")
+        self.list_te_files = SystemUtility.get_list_of_files("./test", "*.te")
 
 
 if __name__ == "__main__":
-    fl_enum = FileEnumeration('.')
-    print('-- List of *_contexts files:')
+    fl_enum = FileEnumeration(".")
+    print("-- List of *_contexts files:")
     print(fl_enum.list_contexts)
-    print('-- List of *.te files:')
+    print("-- List of *.te files:")
     print(fl_enum.list_te_files)
