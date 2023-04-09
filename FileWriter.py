@@ -22,7 +22,7 @@ if __name__ == "__main__":
     print(sys.argv)
     fileWriter = FileWriter
     print(fileWriter.write_file(sys.argv[1], "Yohoooooooooooo"))
-    listOfStr = list()
+    listOfStr = []
     listOfStr.append("Haha")
     listOfStr.append("Hehe")
     listOfStr.append("Hoho")
