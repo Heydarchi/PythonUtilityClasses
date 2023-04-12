@@ -27,6 +27,8 @@ class SystemUtility:
 
     @staticmethod
     def get_file_info(path):
+        if os.path.islink(path):
+            return None
         file_info = FileInfo()
         file_info.name = path
         file_info.size = os.path.getsize(path)
